@@ -35,8 +35,8 @@ Depends:
  libann0, libqhull6,
  libassimp3,
  octave,
- libavcodec53 | libavcodec-extra-53,
- libavformat53 | libavformat-extra-53,
+ libavcodec54 | libavcodec-extra-54,
+ libavformat54 | libavformat-extra-54,
  libswscale2 | libswscale-extra-2,
  python, python-numpy, python-sympy,
  libboost-date-time1.55.0,
@@ -46,7 +46,7 @@ Depends:
  libboost-regex1.55.0,
  libboost-system1.55.0,
  libboost-thread1.55.0,
- libxml2, libopenscenegraph80
+ libxml2, libopenscenegraph99
 Replaces:
  openrave-minimal,
  openrave-python-minimal,
