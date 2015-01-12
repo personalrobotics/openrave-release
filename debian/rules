@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+export DH_VERBOSE=1
+export DEB_PYTHON2_MODULE_PACKAGES=openravepy
+
+%:
+	dh $@ --with=python2
+
+override_dh_auto_build:
+	cmake -DCMAKE_INSTALL_PREFIX=/usr -DOPT_DOUBLE_PRECISION=ON -DOPT_BULLET=OFF -DOPENRAVE_PLUGIN_CONFIGURATIONCACHE=OFF -DOPT_BUILD_PACKAGE_DEFAULT=ON .
+	make -j4
