@@ -2,7 +2,7 @@ Source: pr-openrave
 Section: misc
 Priority: extra
 Maintainer: Michael Koval <mkoval@cs.cmu.edu>
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Homepage: http://openrave.org/
 Vcs-Git: https://github.com/personalrobotics/openrave.git
 Vcs-Browser: https://github.com/personalrobotics/openrave
