@@ -32,7 +32,7 @@ Depends:
  libbz2-1.0, libpcre3, libpcrecpp0,
  libcoin80, libsoqt4-20,
  libode1,
- libann0, libqhull5,
+ libann0, libqhull6,
  libassimp3,
  octave,
  libavcodec53 | libavcodec-extra-53,
