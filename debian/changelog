@@ -1,3 +1,9 @@
+pr-openrave (0.9.2-6trusty) unstable; urgency=medium
+
+  * Removed octave runtime dependency.
+
+ -- Michael Koval <mkoval@cs.cmu.edu>  Sun, 01 Nov 2015 16:52:16 -0500
+
 pr-openrave (0.9.2-5trusty) unstable; urgency=low
 
   * Initial release
