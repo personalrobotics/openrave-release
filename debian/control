@@ -34,7 +34,6 @@ Depends:
  libode1,
  libann0, libqhull6,
  libassimp3,
- octave,
  libavcodec54 | libavcodec-extra-54,
  libavformat54 | libavformat-extra-54,
  libswscale2 | libswscale-extra-2,
