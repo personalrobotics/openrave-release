@@ -13,10 +13,8 @@ Build-Depends: debhelper (>= 8.0.0), cmake, pkg-config,
  libann-dev,
  libqhull-dev,
  libmpfi-dev,
- libgmp,
+ libgmp10,
  libassimp-dev,
- collada-dom2.4-dp-dev,
- collada-dom-dev,
  libavcodec-dev, libavformat-dev, libswscale-dev,
  python-dev,
  python-numpy,
@@ -35,7 +33,6 @@ Build-Depends: debhelper (>= 8.0.0), cmake, pkg-config,
  libopenthreads-dev,
  zlib1g-dev,
  liblog4cxx10-dev,
- libbullet2.82-dev,
  libpcre++-dev
 
 Package: pr-openrave
@@ -50,7 +47,6 @@ Depends:
  libmpfi0,
  libgmp-dev,
  libassimp3,
- collada-dom2.4-dp-base,
  libavcodec54 | libavcodec-extra-54,
  libavformat54 | libavformat-extra-54,
  libswscale2 | libswscale-extra-2,
@@ -68,7 +64,6 @@ Depends:
  libopenthreads14,
  zlib1g,
  liblog4cxx10,
- libbullet2.82,
  libpcre++0
 Replaces:
  openrave-minimal,
