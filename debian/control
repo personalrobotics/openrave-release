@@ -33,7 +33,8 @@ Build-Depends: debhelper (>= 8.0.0), cmake, pkg-config,
  libopenthreads-dev,
  zlib1g-dev,
  liblog4cxx10-dev,
- libpcre++-dev
+ libpcre++-dev,
+ liblapacke-dev
 
 Package: pr-openrave
 Architecture: any
@@ -64,7 +65,8 @@ Depends:
  libopenthreads14,
  zlib1g,
  liblog4cxx10,
- libpcre++0
+ libpcre++0,
+ liblapacke
 Replaces:
  openrave-minimal,
  openrave-python-minimal,
