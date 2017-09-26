@@ -1,21 +1,28 @@
 Source: pr-openrave
-Section: misc
+Section: devel
 Priority: extra
 Maintainer: Michael Koval <mkoval@cs.cmu.edu>
-Standards-Version: 3.9.5
+Standards-Version: 3.9.8
 Homepage: http://openrave.org/
 Vcs-Git: https://github.com/personalrobotics/openrave.git
 Vcs-Browser: https://github.com/personalrobotics/openrave
-Build-Depends: debhelper (>= 8.0.0), cmake, pkg-config,
- libbz2-dev, libpcre3-dev,
- libcoin80-dev, libsoqt4-dev,
+Build-Depends:
+ debhelper (>= 8.0.0),
+ cmake,
+ pkg-config,
+ libbz2-dev,
+ libpcre3-dev,
+ libcoin80-dev,
+ libsoqt4-dev,
  libode-dev,
  libann-dev,
  libqhull-dev,
  libmpfi-dev,
  libgmp10,
  libassimp-dev,
- libavcodec-dev, libavformat-dev, libswscale-dev,
+ libavcodec-dev,
+ libavformat-dev,
+ libswscale-dev,
  python-dev,
  python-numpy,
  python-sympy,
@@ -38,11 +45,16 @@ Build-Depends: debhelper (>= 8.0.0), cmake, pkg-config,
  liblog4cxx10-dev
 
 Package: pr-openrave
+Section: devel
 Architecture: any
 Depends:
- ${shlibs:Depends}, ${misc:Depends},
- libbz2-1.0, libpcre3, libpcrecpp0,
- libcoin80, libsoqt4-20,
+ ${shlibs:Depends},
+ ${misc:Depends},
+ libbz2-1.0,
+ libpcre3,
+ libpcrecpp0,
+ libcoin80,
+ libsoqt4-20,
  libode1,
  libann0,
  libqhull6,
@@ -52,7 +64,9 @@ Depends:
  libavcodec54 | libavcodec-extra-54,
  libavformat54 | libavformat-extra-54,
  libswscale2 | libswscale-extra-2,
- python, python-numpy, python-sympy,
+ python,
+ python-numpy,
+ python-sympy,
  libboost-date-time1.54.0,
  libboost-filesystem1.54.0,
  libboost-iostreams1.54.0,

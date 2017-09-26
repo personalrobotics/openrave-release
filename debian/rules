@@ -1,12 +1,24 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
+# Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
 export DEB_PYTHON2_MODULE_PACKAGES=openravepy
 
-%:
-	dh $@ --with=python2
+override_dh_auto_clean:
+	rm -rf builddir
 
 override_dh_auto_build:
-	cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=/usr -DOPT_BULLET=OFF -DOPT_FCL_COLLISION=OFF
-	make
+	mkdir builddir
+	cd builddir && cmake -DCMAKE_INSTALL_PREFIX=/usr -DOPT_DOUBLE_PRECISION=ON -DOPT_BULLET=OFF -DOPT_BUILD_PACKAGE_DEFAULT=ON ..
+	make -j4 -C builddir
+
+override_dh_auto_test:
+	echo 'skipping test!'
+
+override_dh_auto_install:
+	echo make -C builddir install DESTDIR=$(CURDIR)/debian/tmp
+	make -C builddir install DESTDIR=$(CURDIR)/debian/tmp
+
+%:
+	dh $@ --parallel --buildsystem=cmake --with=python2
